@@ -1,0 +1,3 @@
+[submodule "NBA-Injuries-Analysis-model"]
+	path = NBA-Injuries-Analysis-model
+	url = https://github.com/elap733/NBA-Injuries-Analysis.git
