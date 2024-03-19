@@ -185,7 +185,7 @@ The analysis of NBA injuruies (2013-2023 season) revealed an increase of missed 
 
 ### Required Packages
 
-[Requirements]()
+[Requirements](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/Analysis/requirements.txt)
 
 ### Folder Structure
 
