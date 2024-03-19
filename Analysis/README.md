@@ -70,7 +70,7 @@ My scraped injury datasets included more than 17,000 "inactive list events" and 
 
 [Link to code for data scraping](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/00/scrape)
 
-[Link to scraped datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/00/scraped%20datasets)
+[Link to scraped datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/00/scraped%20datasets)
 
 ### Cleaning 
 
@@ -95,8 +95,8 @@ With the scraping of the dataset concluded, it was time to move onto the cleanin
     - _Prosports Transactions_ includes suffixes (Jr., Sr., III) - _Basketball Reference_ does not.
     - Some players have multiple aliases (name spellings) . _Prosports Transactions_ includes all aliases/spellings with each transaction, _Basketball Reference_ uses just a single name spelling for each player.
 
-[Link to code for data cleaning](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/01/cleaning)
-[Link to cleaned datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/01/clean%20datasets)
+[Link to code for data cleaning](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/01/cleaning)
+[Link to cleaned datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/01/clean%20datasets)
 
 #### Processing 
 
@@ -125,8 +125,8 @@ Now that the data has been cleaned, it is necessary to process the data to prepa
 
 - Merge datasets on "player name" and "year" columns
 
-[Link to code for processing data](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/02/processing)
-[Link to processed datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/02/processed%20datasets)
+[Link to code for processing data](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/02/processing)
+[Link to processed datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/02/processed%20datasets)
 
 ## Analysis  
 
@@ -135,37 +135,44 @@ This analysis focuses on players averaging more than 10 minutes per game in a gi
 ### Analysis of Injury 
 This project will not be the first or the last to utilize [Prosports Transactions](http://prosportstransactions.com/). However, I do think because it uses NBA schedule data and player stats it will be useful to visualize the injuries that occur at specific levels. The merging of the teams schedule and injury data, allows to determine the injury events throughout the year, injury occuring at specific levels, the missed games due to injury, and the specific injuries that occur at specific positions. 
 
-**Fig 1: Count of Injury Events Each Season** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 1: Count of Injury Events Each Season** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219524492070617098/injury_events_plot.png?ex=660b9db0&is=65f928b0&hm=9c954ef8fbac1dd47aec8cfd062cd8c9872bd82dfc0c77404454e25a05b1432c&)
 
-**Fig 2: Count of Injury Events For Specific Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 2: Count of Injury Events For Specific Position**
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219524397614891009/injury_events_positions.png?ex=660b9d9a&is=65f9289a&hm=1cb2d0ee5529db8cfc4fd018ab7122eaa06fab4971630bb66b669d786b3c1c2f&)
 
-**Fig 3: Count of Missed Games Due to Injury** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 3: Count of Missed Games Due to Injury** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://media.discordapp.net/attachments/1219487952674095134/1219524281856299058/missed_games_plot.png?ex=660b9d7e&is=65f9287e&hm=348614fb777c00e905f58998018a32048fb4aa259cafa6b2b6d3b4cb550ab8a0&=&format=webp&quality=lossless&width=1050&height=700)
 
-**Fig 4: Count of Missed Games Due to Injury For Specific Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 4: Count of Missed Games Due to Injury For Specific Position** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219524197697589289/missed_games_position_plot.png?ex=660b9d6a&is=65f9286a&hm=578559637915fb747acf882b557b897300462c6018538180020946a9e0d91328&)
 
-**Fig 5: Count of Missed Games Due to Specific Injury For Guard Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 5: Count of Missed Games Due to Specific Injury For Guard Position** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219524068915675217/guard_injury_events_by_year_plot.png?ex=660b9d4b&is=65f9284b&hm=8e298b89cc5a9f3eaa03b7da4d6039663eb869275c099d27d8178b31478546ba&)
 
-**Fig 6: Count of Missed Games Due to Specific Injury For Forward Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 6: Count of Missed Games Due to Specific Injury For Forward Position** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219523982206963763/forward_injury_events_by_year_plot.png?ex=660b9d37&is=65f92837&hm=8c6cf842162a21847f769d66ad6ebadc2a8c068da6914f7fef59349fa33ce4a4&)
 
-**Fig 7: Count of Missed Games Due to Specific Injury For Center Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
+**Fig 7: Count of Missed Games Due to Specific Injury For Center Position** 
+[Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/Analysis/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
 ![Fig](https://cdn.discordapp.com/attachments/1219487952674095134/1219523812325064734/center_injury_events_by_year_plot.png?ex=660b9d0e&is=65f9280e&hm=b07634e211394f31dc976d93fbe370e9d68ef5832ae46697e591b4c8571f3a44&)
