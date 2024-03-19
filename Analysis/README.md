@@ -11,8 +11,7 @@ This README will provide the overview of the NBA Project within this respository
   * [Cleaning](#cleaning)
   * [Processing](#processing)
 * [Analysis](#analysis)
-  * [Analysis of Injury Trends](#analysis-of-injury-trends)
-  * [Analysis of Other Factors](#analysis-of-other-factors)
+  * [Analysis of Injury](#analysis-of-injury)
 * [Conclusion](#conclusion)
 * [Additional instructions for using this repository](#additional_instructions_for_using_this_repository)
 
@@ -46,7 +45,7 @@ Python's *BeautifulSoup* package was utilized to create four script to scrape da
      * **"Movement to/from injured/inactive list (IL)"**
      This transaction (event) occurs when a team places a player on their inactive roster. Teams typically move a player to the inactive roster if the player is expected to be out due to an injury for an extended period of time. This allows another (healthy) player to assume the injured player's spot on the active roster.
 
-      A "transaction" event in this database provides the following information:
+  A "transaction" event in this database provides the following information:
    *  'Date' - Date of missed game/ movement to IL 
    *  'Team' - The player's team
    *  'Acquired' - The name of the player returning to lineup
@@ -69,9 +68,9 @@ My scraped injury datasets included more than 17,000 "inactive list events" and 
      * In this analysis, a threshold of 10 minutes played per game average (i.e. a player must have averaged at least 10 minutes per game during the season in which the injury event occurred).
      * By doing this I was able to focus my analysis on the most relevant segment of the player population - starters and first string reserve players, also known as key players.
 
-[Link to code for data scraping]()
+[Link to code for data scraping](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/00/scrape)
 
-[Link to scraped datasets]()
+[Link to scraped datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/00/scraped%20datasets)
 
 ### Cleaning 
 
@@ -96,7 +95,8 @@ With the scraping of the dataset concluded, it was time to move onto the cleanin
     - _Prosports Transactions_ includes suffixes (Jr., Sr., III) - _Basketball Reference_ does not.
     - Some players have multiple aliases (name spellings) . _Prosports Transactions_ includes all aliases/spellings with each transaction, _Basketball Reference_ uses just a single name spelling for each player.
 
-[Link to code for data cleaning]()
+[Link to code for data cleaning](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/01/cleaning)
+[Link to cleaned datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/01/clean%20datasets)
 
 #### Processing 
 
@@ -125,7 +125,8 @@ Now that the data has been cleaned, it is necessary to process the data to prepa
 
 - Merge datasets on "player name" and "year" columns
 
-[Link to code for processing data]()
+[Link to code for processing data](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/02/processing)
+[Link to processed datasets](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/02/processed%20datasets)
 
 ## Analysis  
 
@@ -134,33 +135,40 @@ This analysis focuses on players averaging more than 10 minutes per game in a gi
 ### Analysis of Injury 
 This project will not be the first or the last to utilize [Prosports Transactions](http://prosportstransactions.com/). However, I do think because it uses NBA schedule data and player stats it will be useful to visualize the injuries that occur at specific levels. The merging of the teams schedule and injury data, allows to determine the injury events throughout the year, injury occuring at specific levels, the missed games due to injury, and the specific injuries that occur at specific positions. 
 
-**Fig 1: Count of Injury Events Each Season** [Code To Recreate Plot]()
-
+**Fig 1: Count of Injury Events Each Season** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 2: Count of Injury Events For Specific Position** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/injury_events_plot.png)
 
+**Fig 2: Count of Injury Events For Specific Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 3: Count of Missed Games Due to Injury** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/injury_events_positions.png)
 
+**Fig 3: Count of Missed Games Due to Injury** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 4: Count of Missed Games Due to Injury For Specific Position** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/missed_games_plot.png)
 
+**Fig 4: Count of Missed Games Due to Injury For Specific Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 5: Count of Missed Games Due to Specific Injury For Guard Position** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/missed_games_position_plot.png)
 
+**Fig 5: Count of Missed Games Due to Specific Injury For Guard Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 6: Count of Missed Games Due to Specific Injury For Forward Position** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/guard_injury_events_by_year_plot.png)
 
+**Fig 6: Count of Missed Games Due to Specific Injury For Forward Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
 
-**Fig 7: Count of Missed Games Due to Specific Injury For Center Position** [Code To Recreate Plot]()
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/forward_injury_events_by_year_plot.png)
 
+**Fig 7: Count of Missed Games Due to Specific Injury For Center Position** [Code To Recreate Plot](https://github.com/nyaac/NBA-Injuries-Analysis/tree/master/NBA%20Project/03/visual%20code)
 *NOTE: excluded events related to personal reasons, rest, or sickness; included only players averaging 10 minutes per game.*
+
+![Fig](https://github.com/nyaac/NBA-Injuries-Analysis/blob/master/NBA%20Project/03/visuals/center_injury_events_by_year_plot.png)
 
 ## Conclusions
 
